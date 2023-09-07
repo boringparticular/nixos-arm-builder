@@ -13,11 +13,13 @@
     };
   in {
     formatter.${system} = pkgs.alejandra;
-    armBuilder = nixpkgs.lib.nixosConfiguration {
-      inherit system;
-      modules = [
-        ./configuration.nix
-      ];
+    nixosConfigurations = {
+      armBuilder = nixpkgs.lib.nixosConfiguration {
+        inherit system;
+        modules = [
+          ./configuration.nix
+        ];
+      };
     };
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
