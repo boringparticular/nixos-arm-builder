@@ -14,7 +14,7 @@
   in {
     formatter.${system} = pkgs.alejandra;
     nixosConfigurations = {
-      armBuilder = nixpkgs.lib.nixosConfiguration {
+      armBuilder = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
