@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+  };
+
   users.users = {
     kmies = {
       isNormalUser = true;
