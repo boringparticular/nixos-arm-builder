@@ -17,6 +17,8 @@
       armBuilder = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          ./legacy.nix
+          ./users.nix
           ./hardware-configuration.nix
           ./configuration.nix
         ];

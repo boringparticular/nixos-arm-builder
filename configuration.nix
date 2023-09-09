@@ -1,14 +1,4 @@
 {pkgs, ...}: {
-  /*
-     boot.loader.grub = {
-    enable = true;
-    device = "/dev/sda";
-  };
-  */
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   users.users = {
     kmies = {
       isNormalUser = true;
