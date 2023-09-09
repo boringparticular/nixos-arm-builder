@@ -31,7 +31,7 @@
     package = pkgs.nixFlakes;
     settings = {
       experimental-features = ["nix-command" "flakes"];
-      auto-optimise-store = true;
+      # auto-optimise-store = true;
       builders-use-substitutes = true;
       substituters = [
         "https://nix-community.cachix.org"
