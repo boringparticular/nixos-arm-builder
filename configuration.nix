@@ -35,6 +35,7 @@
   nix = {
     package = pkgs.nixFlakes;
     settings = {
+      sandbox = false;
       experimental-features = ["nix-command" "flakes"];
       # auto-optimise-store = true;
       builders-use-substitutes = true;
